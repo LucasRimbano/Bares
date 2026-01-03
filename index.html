@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bar NOCHE — Coctelería, música y rituales en Buenos Aires</title>
+  <meta name="description" content="Bar NOCHE: coctelería de autor, clásicos impecables, cocina para compartir y música. Reservá tu mesa y viví la noche en Buenos Aires." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bar NOCHE — Coctelería, música y rituales" />
+  <meta property="og:description" content="Reservá tu mesa. Tragos de autor, cocina para compartir y una noche que se siente." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-cover.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span class="pill">Buenos Aires</span>
+        <span class="dot"></span>
+        <span class="muted">Recoleta / Palermo / Microcentro (editá)</span>
+      </div>
+
+      <div class="topbar-right">
+        <a class="top-link" href="#ubicacion">Cómo llegar</a>
+        <a class="top-link" href="#carta">Ver carta</a>
+        <a class="btn btn-small btn-ghost" href="#reservas">Reservar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="inicio">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">NOCHE</span>
+          <span class="brand-sub">Bar & Coctelería</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#experiencia">Experiencia</a>
+        <a href="#carta">Carta</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-ghost" href="#carta">Carta</a>
+        <a class="btn btn-primary" href="#reservas">Reservá tu mesa</a>
+        <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="container mobile-menu-inner">
+        <a href="#experiencia">Experiencia</a>
+        <a href="#carta">Carta</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a class="btn btn-primary" href="#reservas">Reservar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-media" aria-hidden="true">
+      <!-- Opción 1: imagen (recomendado para performance) -->
+      <div class="hero-image"></div>
+
+      <!-- Opción 2: video (si lo usás, comentá la imagen de arriba)
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+        <source src="assets/hero.mp4" type="video/mp4" />
+      </video>
+      -->
+      <div class="hero-overlay"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="kicker">Coctelería de autor · clásicos perfectos · música</p>
+        <h1>Una noche que se siente desde el primer trago.</h1>
+        <p class="lead">
+          Luces bajas, barra protagonista, cocina para compartir y un ritmo que te acomoda el plan.
+          Vení por un after, quedate por la noche.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#reservas">Reservá ahora</a>
+          <a class="btn btn-ghost" href="#carta">Ver carta destacada</a>
+        </div>
+
+        <div class="hero-proof" aria-label="Pruebas sociales">
+          <div class="proof-card">
+            <span class="proof-big">4.8</span>
+            <span class="proof-small">Promedio reseñas</span>
+          </div>
+          <div class="proof-card">
+            <span class="proof-big">20:00</span>
+            <span class="proof-small">Apertura (editá)</span>
+          </div>
+          <div class="proof-card">
+            <span class="proof-big">After</span>
+            <span class="proof-small">Martes a sábado</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card" id="reservas">
+        <div class="card-head">
+          <h2>Reservá tu mesa</h2>
+          <p class="muted">Confirmación rápida. Cupos limitados en fin de semana.</p>
+        </div>
+
+        <form class="reserve-form" action="#" method="post">
+          <label class="field">
+            <span>Nombre</span>
+            <input type="text" name="name" placeholder="Tu nombre" required />
+          </label>
+
+          <div class="grid-2">
+            <label class="field">
+              <span>Fecha</span>
+              <input type="date" name="date" required />
+            </label>
+
+            <label class="field">
+              <span>Hora</span>
+              <input type="time" name="time" required />
+            </label>
+          </div>
+
+          <div class="grid-2">
+            <label class="field">
+              <span>Personas</span>
+              <select name="party" required>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Contacto</span>
+              <input type="tel" name="phone" placeholder="WhatsApp" required />
+            </label>
+          </div>
+
+          <button class="btn btn-primary btn-block" type="submit">Pedir reserva</button>
+
+          <p class="fineprint">
+            También podés reservar por WhatsApp. Para grupos de +8, escribinos con anticipación.
+          </p>
+
+          <div class="quick-actions">
+            <a class="btn btn-ghost btn-block" href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
+              Reservar por WhatsApp
+            </a>
+            <a class="btn btn-ghost btn-block" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+              Ver Instagram
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experiencia">
+    <div class="container">
+      <div class="section-head">
+        <h2>La experiencia</h2>
+        <p class="muted">
+          Un bar no se explica: se vive. Por eso diseñamos cada detalle para que la noche fluya.
+        </p>
+      </div>
+
+      <div class="cards-3">
+        <article class="card">
+          <div class="icon">🍸</div>
+          <h3>Barra protagonista</h3>
+          <p>Coctelería de autor con técnica, equilibrio y servicio cálido. Clásicos impecables cuando querés ir a lo seguro.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎶</div>
+          <h3>Música que acompaña</h3>
+          <p>Sets curados para after y noche. Volumen justo: conversación, risas y brindis sin esfuerzo.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🍽️</div>
+          <h3>Cocina para compartir</h3>
+          <p>Platos pensados para mesa: entradas, tapeo y finales dulces. Ideal para “una más” sin apuro.</p>
+        </article>
+      </div>
+
+      <div class="banner">
+        <div class="banner-copy">
+          <h3>¿Primera vez?</h3>
+          <p class="muted">Pedinos el “flight” de la casa: 3 tragos en tamaño degustación según tu perfil (seco, cítrico, dulce).</p>
+        </div>
+        <a class="btn btn-primary" href="#carta">Ver sugerencias</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu highlight -->
+  <section class="section section-alt" id="carta">
+    <div class="container">
+      <div class="section-head">
+        <h2>Carta destacada</h2>
+        <p class="muted">Una muestra para abrir el apetito. Linkeá tu PDF o una página “menu.html”.</p>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="menu-tag">Firma</div>
+          <h3>Negroni de la casa</h3>
+          <p class="muted">Gin · vermut rosso · bitter · twist de naranja</p>
+          <div class="price-row">
+            <span class="price">$ —</span>
+            <span class="muted">Clásico, intenso</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-tag">Cítrico</div>
+          <h3>Maracuyá Spritz</h3>
+          <p class="muted">Espumante · maracuyá · soda · lima</p>
+          <div class="price-row">
+            <span class="price">$ —</span>
+            <span class="muted">Fresco</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-tag">Ahumado</div>
+          <h3>Old Fashioned</h3>
+          <p class="muted">Bourbon · bitter · azúcar · perfume ahumado</p>
+          <div class="price-row">
+            <span class="price">$ —</span>
+            <span class="muted">Profundo</span>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-tag">Sin alcohol</div>
+          <h3>Gimlet 0.0</h3>
+          <p class="muted">Botánicos · lima · cordial</p>
+          <div class="price-row">
+            <span class="price">$ —</span>
+            <span class="muted">Cero excusas</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#" aria-label="Abrir carta completa">Ver carta completa</a>
+        <a class="btn btn-ghost" href="#reservas">Reservar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="section" id="eventos">
+    <div class="container">
+      <div class="section-head">
+        <h2>Eventos & celebraciones</h2>
+        <p class="muted">
+          Cumples, after office, brindis corporativo o fecha especial: armamos la noche a medida.
+        </p>
+      </div>
+
+      <div class="cards-2">
+        <article class="card card-media">
+          <div class="card-media-bg card-bg-1" aria-hidden="true"></div>
+          <div class="card-media-overlay" aria-hidden="true"></div>
+          <div class="card-media-content">
+            <h3>Reservas para grupos</h3>
+            <p>Menú por pasos, opciones veggie y coctelería por tandas. Coordinación simple.</p>
+            <a class="btn btn-primary" href="#reservas">Consultar cupos</a>
+          </div>
+        </article>
+
+        <article class="card card-media">
+          <div class="card-media-bg card-bg-2" aria-hidden="true"></div>
+          <div class="card-media-overlay" aria-hidden="true"></div>
+          <div class="card-media-content">
+            <h3>Noches temáticas</h3>
+            <p>DJ sets, guest bartenders y ciclos. Anunciamos agenda en Instagram.</p>
+            <a class="btn btn-ghost" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Ver agenda</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<!-- Gallery (Tragos) -->
+<section class="section section-alt" id="galeria">
+  <div class="container">
+    <div class="section-head">
+      <h2>Tragos que piden otra ronda</h2>
+      <p class="muted">
+        Coctelería de autor y clásicos perfectos. Mirá la carta y elegí tu mood.
+      </p>
+    </div>
+
+    <div class="gallery gallery-drinks">
+      <figure class="g d1" aria-label="Trago firma 1"></figure>
+      <figure class="g d2" aria-label="Trago cítrico 2"></figure>
+      <figure class="g d3" aria-label="Trago ahumado 3"></figure>
+      <figure class="g d4" aria-label="Trago spritz 4"></figure>
+      <figure class="g d5" aria-label="Trago clásico 5"></figure>
+      <figure class="g d6" aria-label="Detalle de barra 6"></figure>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#reservas">Reservá tu mesa</a>
+      <a class="btn btn-ghost" href="#carta">Ver carta destacada</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Reviews -->
+  <section class="section" id="resenas">
+    <div class="container">
+      <div class="section-head">
+        <h2>Lo que dicen</h2>
+        <p class="muted">Sumá reviews reales (Google Maps) cuando lo publiques.</p>
+      </div>
+
+      <div class="quotes">
+        <article class="quote">
+          <p>“Barra impecable. Pedimos sugerencias y le pegó a todo. Volvemos.”</p>
+          <span class="muted">— Martina, Google</span>
+        </article>
+
+        <article class="quote">
+          <p>“El lugar tiene una vibra tremenda. Ideal para arrancar la noche.”</p>
+          <span class="muted">— Nico, Instagram</span>
+        </article>
+
+        <article class="quote">
+          <p>“Buena música, buena atención, tragos con intención. Eso.”</p>
+          <span class="muted">— Sofi, Google</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="section section-alt" id="ubicacion">
+    <div class="container">
+      <div class="section-head">
+        <h2>Ubicación & horarios</h2>
+        <p class="muted">Poné la dirección real y el link de Google Maps.</p>
+      </div>
+
+      <div class="location">
+        <div class="location-card">
+          <h3>Encontranos</h3>
+          <p class="muted">
+            Dirección: <strong>Av. Ejemplo 1234, CABA</strong><br>
+            Tel/WhatsApp: <strong>+54 9 11 1234-5678</strong><br>
+            Email: <strong>reservas@tubar.com</strong>
+          </p>
+
+          <div class="hours">
+            <div class="hours-row"><span>Mar</span><span>20:00 – 02:00</span></div>
+            <div class="hours-row"><span>Mié</span><span>20:00 – 02:30</span></div>
+            <div class="hours-row"><span>Jue</span><span>20:00 – 03:00</span></div>
+            <div class="hours-row"><span>Vie</span><span>20:00 – 04:00</span></div>
+            <div class="hours-row"><span>Sáb</span><span>20:00 – 04:00</span></div>
+            <div class="hours-row"><span>Dom</span><span>20:00 – 02:00</span></div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#reservas">Reservar</a>
+            <a class="btn btn-ghost" href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">Abrir Maps</a>
+          </div>
+
+          <p class="fineprint">
+            Dress code sugerido: smart casual. Entrada +18 (editá según tu bar).
+          </p>
+        </div>
+
+        <div class="map-embed" aria-label="Mapa">
+          <!-- Pegá acá el iframe real de Google Maps -->
+          <div class="map-placeholder">
+            <div>
+              <p class="muted">Mapa (embed)</p>
+              <p>Reemplazá este bloque por tu iframe de Google Maps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="brand tiny">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-name">NOCHE</span>
+            <span class="brand-sub">Bar & Coctelería</span>
+          </span>
+        </div>
+        <p class="muted">Coctelería · música · encuentros. Hecho para convertir visitas en reservas.</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="#inicio">Inicio</a>
+        <a href="#carta">Carta</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#ubicacion">Ubicación</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <small>© 2026 NOCHE. Todos los derechos reservados.</small>
+      <small class="muted">Diseño web & marketing.</small>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="float-wa" href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer" aria-label="Reservar por WhatsApp">
+    <span aria-hidden="true">WA</span>
+  </a>
+
+  <script>
+    // Menú mobile (mínimo y sin dependencias)
+    const btn = document.querySelector('.burger');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        menu.hidden = open;
+      });
+      // Cierra al tocar un link
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        btn.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+      }));
+    }
+  </script>
+</body>
+</html>
